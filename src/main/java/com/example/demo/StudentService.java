@@ -36,6 +36,11 @@ public class StudentService {
          return  stdao.addStudent(newstd);
     }
 
+    @Transactional
+    public Long addStudent(Student std) {
+        return  stdao.addStudent(std);
+    }
+
     List<Student> liststudents(){
         return  stdao.listallstudents();
     }

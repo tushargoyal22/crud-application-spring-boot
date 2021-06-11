@@ -30,6 +30,13 @@ public class StudentController {
         return  ans;
     }
 
+    @RequestMapping(method = RequestMethod.POST , value = "/addstudent")
+    public Long addstudent(@RequestBody  Student std) {
+        Long ans = studentService.addStudent(std);
+        System.out.println(ans);
+        return  ans;
+    }
+
     @GetMapping("/liststudents")
     public  List<Student> liststudent() {
         List<Student> ans = studentService.liststudents();
